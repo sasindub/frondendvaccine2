@@ -141,7 +141,7 @@ function App() {
           <button type="submit" className="btn btn-primary">
             {loading ? "Predicting..." : "Predict"}
           </button>
-          <a
+          {/* <a
             href="/chart"
             className="btn btn-chart"
             onClick={(e) => {
@@ -151,7 +151,7 @@ function App() {
             
           >
             View Chart
-          </a>
+          </a> */}
         </div>
       </form>
 

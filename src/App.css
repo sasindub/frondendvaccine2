@@ -68,7 +68,7 @@ label {
   font-size: 0.875rem; /* Smaller font size for buttons */
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  width: 49%;
+  width: 100%;
 }
 
 .btn-primary:hover {
