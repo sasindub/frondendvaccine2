@@ -23,7 +23,7 @@ function App() {
         setPredictedDemand('');
 
         try {
-            const response = await axios.post('http://localhost:8080/predict', formData);
+            const response = await axios.post('https://whfgrx3r-8080.asse.devtunnels.ms/predict', formData);
             setPredictedDemand(`Predicted Demand: ${response.data.predicted_demand}`);
         } catch (error) {
             console.error(error);
