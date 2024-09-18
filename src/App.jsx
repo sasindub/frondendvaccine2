@@ -5,7 +5,7 @@ function App() {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    axios.get('http://127.0.0.1:8080/')
+    axios.get('https://testbackend-bafmbedyfab7bwhs.westindia-01.azurewebsites.net/')
       .then(response => setMessage(response.data.message))
       .catch(error => console.log(error));
   }, []);
