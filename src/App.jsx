@@ -48,7 +48,7 @@ function App() {
 
   return (
     <div className="container">
-      <h3>BCG VACCINE DEMAND FORECAST</h3>
+      <h3 class="space">BCG VACCINE DEMAND FORECAST</h3>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="region" className="form-label">

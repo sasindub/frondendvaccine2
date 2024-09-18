@@ -30,6 +30,10 @@ h1 {
   text-align: center;
 }
 
+.space {
+  letter-spacing: 4px;
+}
+
 h3 {
   font-size: 1.1rem; 
   font-weight: 500;
