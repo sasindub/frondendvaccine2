@@ -1,6 +1,5 @@
-/* Base styles remain the same */
 body {
-  background: linear-gradient(136deg, #a5d6a7, #011802); /* Light green shades */
+  background: linear-gradient(136deg, #a5d6a7, #011802);
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -8,10 +7,12 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #333;
   margin: 0;
+  padding: 0 10px; /* Added padding to avoid content touching screen edge */
 }
 
 .container {
-  width: 500px;
+  width: 500px; 
+  max-width: 500px; 
   background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   padding: 20px;
@@ -25,18 +26,18 @@ h1, h3 {
 }
 
 .space {
-  letter-spacing: 2px;
+  letter-spacing: 4px;
 }
 
 h1 {
-  font-size: 5pt; 
+  font-size: 5pt;
   font-weight: 600;
   margin-bottom: 20px;
   text-align: center;
 }
 
 h3 {
-  font-size: 1.1rem; 
+  font-size: 1.1rem;
   font-weight: 500;
   margin-bottom: 20px;
   text-align: center;
@@ -47,17 +48,19 @@ label {
   color: #2e7d32;
 }
 
-.form-control, .form-select {
+.form-control,
+.form-select {
   background-color: #e8f5e9;
   border: 1px solid #c8e6c9;
   padding: 8px;
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
   border-radius: 4px;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
   width: 100%;
 }
 
-.form-control:focus, .form-select:focus {
+.form-control:focus,
+.form-select:focus {
   border-color: #66bb6a;
   box-shadow: 0 0 8px rgba(102, 187, 106, 0.5);
 }
@@ -66,7 +69,7 @@ label {
   background-color: #2e7d32;
   border: none;
   padding: 8px 16px;
-  font-size: 0.875rem; 
+  font-size: 0.875rem;
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   width: 100%;
@@ -85,7 +88,7 @@ label {
   border-radius: 4px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   color: white;
-  width: 49%;
+  width: 100%; /* Buttons full width on mobile */
 }
 
 .btn-chart:hover {
@@ -108,38 +111,54 @@ label {
   border: 4px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
   border-top: 4px solid #2e7d32;
-  width: 32px; 
-  height: 32px; 
+  width: 32px;
+  height: 32px;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Responsive styles for smaller screens */
-@media (max-width: 600px) {
+.inactive-tab-text {
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+.active-tab {
+  background-color: #2e7d32 !important;
+}
+
+.active-tab-text {
+  color: white !important;
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
   .container {
-    width: 90%;
+    width: 100%;
     padding: 15px;
   }
-  
+
   h3 {
     font-size: 1rem;
   }
 
-  .form-control, .form-select {
-    font-size: 0.75rem; /* Slightly smaller font for inputs */
+  label {
+    font-size: 0.875rem;
   }
 
   .btn-primary, .btn-chart {
-    font-size: 0.75rem; /* Adjust button font size */
-    width: 100%;
     padding: 10px;
+    font-size: 1rem; 
   }
 
-  .btn-chart {
-    margin-top: 10px;
+  .form-control, .form-select {
+    font-size: 0.875rem;
   }
 }
